@@ -1,0 +1,95 @@
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ ls -a  /////////检测该目录下所有文件(隐藏)1
+./  ../
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git init   //////初始化仓库2
+Initialized empty Git repository in E:/gitDemo/1708A/.git/
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git init
+Reinitialized existing Git repository in E:/gitDemo/1708A/.git/
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git remote add origin git@github.com:KKy2016/1708A.git///连接远程仓库3
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git pull origin master/////////从远程仓库下载文件4
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.255.113' (RSA) to the list of known hosts.
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From github.com:KKy2016/1708A
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:KKy2016/1708A
+ * branch            master     -> FETCH_HEAD
+   70ff8f5..33a630a  master     -> origin/master
+Updating 70ff8f5..33a630a
+Fast-forward
+ aa.mp3 | Bin 0 -> 4225781 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aa.mp3
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git add Git.png   /////添加要上传的文件5
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git status    ///////检测仓库状态6
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Git.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.docx
+
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git add *   //将仓库中所有新增文件,添加到7
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Git.docx
+        new file:   Git.png
+
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git commit -m "这是我用git命令提交的"/////////////为本次提交添加注释8
+[master 568ef72] 这是我用git命令提交的
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git.docx
+ create mode 100644 Git.png
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$ git push -u origin master////将以上数据上传到远程仓库9
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 319.87 KiB | 1.02 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To github.com:KKy2016/1708A.git
+   33a630a..568ef72  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+kky@Kky MINGW64 /e/gitDemo/1708A (master)
+$
